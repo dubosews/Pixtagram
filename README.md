@@ -22,7 +22,7 @@
   <br><img src="./public/images/Capture.PNG">
 
   ## Links
-  **GitHub**: https://github.com/wcastellan/Pixtagram
+  **GitHub**: https://github.com/dubosews/dubosews_P02
   <br>
   **Heroku**: https://fierce-journey-71940.herokuapp.com/
 
