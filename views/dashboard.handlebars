@@ -1,0 +1,55 @@
+<div class="dashboard-wrapper">
+  <section class="dashboard-users">
+    
+    <div id="dashboard-users-list-heading">
+      <h3 id="logo">
+        Friends
+      </h3>
+    </div>
+    {{#if users.length}}
+    <div id="dashboard-users-list">
+      <ul>
+        {{#each users as |user|}}
+        <li>
+          {{> user-info user}}
+          <a href="/users/{{user.id}}">{{user.username}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </section>
+
+  
+  <section class="dashboard-pic-feed">
+    <ol>
+      
+      <li id="feed-pic">
+        user posted on Jan 26, 2022
+        <img src="/images/test-one.jpg" height="500" width="500">
+        alien commented "What a creep!"
+        <br>
+        you commented "The other half must be really bad"
+      </li>
+    </ol>
+    {{#if loggedIn}}
+    <form class="comment-form">
+      <div>
+        <textarea name="comment-body" id="comment-body"></textarea>
+      </div>
+
+      <div>
+        <button href="" type="submit" class="btn">add comment</button>
+        <button type="button" class="btn" id="upvote-btn">upvote</button>
+      </div>
+    </form>
+    {{/if}}
+
+    {{> comments user.comments}}
+  </section>
+  
+</div>
+<script src="/javascript/add-post.js"></script>
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
